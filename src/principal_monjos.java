@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Iterator;
 
 
 public final class principal_monjos {
@@ -17,11 +18,12 @@ public final class principal_monjos {
 		int intervalo = (int) (Math.random()*8+3);
 		for (int i =0 ; i <4; i++){
 			//agregamos monjos
-			lista.add(new monjo(monjo.getNombre(), monjo.getDinero(),monjo.getPiedras()));
 
+			lista.add(new monjo(monjo.getNombre(), monjo.getDinero(),monjo.getPiedras()));
 		}
 
 		//imprimimos monjos
+
 		for (int i = 0 ;i<lista.size();i++){
 			System.out.println(lista.get(i));
 		}
