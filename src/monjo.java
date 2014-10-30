@@ -5,8 +5,9 @@ public class monjo {
 	//constructros
 	private static int MisPiedras, piedras;
 	private static int dinero;
-	private static String nombre ;
-	private Random r= new Random();
+	private static int nombre ;
+
+	//private Random r= new Random();
 	static Scanner lectura = new Scanner(System.in);
 
 	public int NumeroEscoje(){
@@ -18,15 +19,14 @@ public class monjo {
 
 	}
 
-    public monjo(final String elnom, final int dinersquete, final int pedresquete) {
+    public monjo(final int elnom, final int dinersquete, final int pedresquete) {
         nombre = elnom;
         dinero = dinersquete;
         piedras = pedresquete;
     }
 
-	public static String getNombre() {
-		System.out.println("Introduce el nombre del monje :");
-		nombre = lectura.nextLine(); //te pilla toda el string de nombres
+	public static int getNombre() {
+		nombre += 1;
 		return nombre;
 	}
 
@@ -41,7 +41,7 @@ public class monjo {
 	}
 
 	public String toString(){
-		return " nombre: " + this.nombre + " Dinero: " + this.dinero + " Piedras: "+ this.piedras;
+		return " MONJO_" + monjo.nombre + " Dinero: " + monjo.dinero + " Piedras: "+ monjo.piedras;
 	}
 
 

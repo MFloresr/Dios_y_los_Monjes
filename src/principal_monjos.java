@@ -18,11 +18,12 @@ public final class principal_monjos {
 		int intervalo = (int) (Math.random()*8+3);
 		for (int i =0 ; i <4; i++){
 			//agregamos monjos
-
 			lista.add(new monjo(monjo.getNombre(), monjo.getDinero(),monjo.getPiedras()));
+			System.out.println(lista.get(i));
 		}
 
 		//imprimimos monjos
+		//System.out.println(lista.toString());
 
 		for (int i = 0 ;i<lista.size();i++){
 			System.out.println(lista.get(i));
