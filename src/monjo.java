@@ -31,7 +31,7 @@ public class monjo {
 	}
 
 	public static int getDinero() {
-		dinero= (int) (Math.random()*(20)+1);
+		dinero= (int) (Math.random()*(10)+1);
 		return dinero;
 	}
 
