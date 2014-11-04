@@ -19,10 +19,13 @@ public final class principal_monjos {
 		int intervalo = (int) (Math.random()*8+3);
 		for (int i =0 ; i<5; i++){
 			//agregamos monjos
-			
-			monjo = new monjos.add(monjos[i].getNombre()+" "+monjos[i].getDinero()+" "+monjos[1].getPiedras()) ;
+			monjo sujeto = new monjo();
+			monjos.add(new monjo(monjo.DarNombre(), monjo.DarDinero(), monjo.DarPiedras()));
+			System.out.println(monjos.get(i));
 		}
 		System.out.println("PRECIO DEL BILLETE : " + billet);
+
+		System.out.println(intervalo);
 
 		//tirar dado
 		dado numero = new dado();
