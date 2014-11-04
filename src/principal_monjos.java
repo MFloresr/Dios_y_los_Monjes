@@ -15,12 +15,12 @@ public final class principal_monjos {
 
     	int billet = (int) (Math.random()*(20-10+1)+10);
 		//ArrayList de monjos
-		List<monjo> lista = new ArrayList<monjo>();
+		ArrayList<monjo> monjos = new ArrayList<monjo>();
 		int intervalo = (int) (Math.random()*8+3);
-		for (int i =0 ; i <5; i++){
+		for (int i =0 ; i<5; i++){
 			//agregamos monjos
-			lista.add(new monjo(monjo.getNombre(), monjo.getDinero(),monjo.getPiedras()));
-			System.out.println(lista.get(i));
+			
+			monjo = new monjos.add(monjos[i].getNombre()+" "+monjos[i].getDinero()+" "+monjos[1].getPiedras()) ;
 		}
 		System.out.println("PRECIO DEL BILLETE : " + billet);
 
