@@ -1,19 +1,20 @@
-import java.util.Random;
 
 public class dado {
 
 	//contructors
-	private int NumeroDado;
-	private Random r= new Random();
+	private int numero;
 
 	public dado(){
 
 	}
 
 	public  int TirarDado(){
-		NumeroDado = (int) (Math.random()*(10)+1);
-		return NumeroDado;
+		numero = (int) (Math.random()*(6)+1);
+		return numero;
 	}
 
+	public final int getNumero() {
+		return numero;
+	}
 
 }

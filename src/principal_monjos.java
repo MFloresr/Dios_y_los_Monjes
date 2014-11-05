@@ -1,9 +1,8 @@
 import java.lang.String;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
-import java.util.Iterator;
+
+
+
 
 
 public final class principal_monjos {
@@ -11,31 +10,40 @@ public final class principal_monjos {
 
     public static void main(String[] args) {
 
-    	//variables
-
+    	//VARIABLES
     	int billet = (int) (Math.random()*(20-10+1)+10);
-		//ArrayList de monjos
 		ArrayList<monjo> monjos = new ArrayList<monjo>();
-		int intervalo = (int) (Math.random()*8+3);
+		dado numero = new dado();
+		monjo sujeto = new monjo();
+		String nombre;
+		int dinero;
+		int piedra;
+		//INGRESAMOS 5 MONJES
 		for (int i =0 ; i<5; i++){
-			//agregamos monjos
-			monjo sujeto = new monjo();
-			monjos.add(new monjo(monjo.DarNombre(), monjo.DarDinero(), monjo.DarPiedras()));
-			System.out.println(monjos.get(i));
+
+			nombre = sujeto.DarNombre();
+			dinero = sujeto.DarDinero();
+			piedra = sujeto.DarPiedras();
+			monjos.add(sujeto);
+			System.out.println(nombre+" "+ dinero+ " " + piedra);
 		}
+
+		//PNTAMOS PRECIO BILLETE
 		System.out.println("PRECIO DEL BILLETE : " + billet);
 
-		System.out.println(intervalo);
-
-		//tirar dado
-		dado numero = new dado();
+		//TIRAMOS DADO y PINTAMOS VALOR
 		numero.TirarDado();
-		System.out.println("NUMERO DE LA SUERTE" + numero);
-		//imprimimos monjos
-		//System.out.println(lista.toString());
+		System.out.println("NUMERO DE LA SUERTE : " + numero.getNumero());
 
-		//for (int i = 0 ;i<lista.size();i++){
-		//	System.out.println(lista.get(i));
-		//}
+		for(monjo o: monjos){
+			System.out.println(o);
+		}
+
+		/*for (int i =0 ; i<monjos.size(); i++){
+
+			System.out.println(sujeto.getNombre()+" "+ sujeto.getDinero()+ " " + sujeto.getPiedras());
+			System.out.println(monjos.get(i));
+		}*/
+
     }
 }
