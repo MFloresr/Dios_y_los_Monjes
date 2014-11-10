@@ -8,41 +8,36 @@ import java.util.ArrayList;
 public final class principal_monjos {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
     	//VARIABLES
     	int billet = (int) (Math.random()*(20-10+1)+10);
 		ArrayList<monjo> monjos = new ArrayList<monjo>();
 		dado numero = new dado();
-		monjo sujeto = new monjo();
-		String nombre;
-		int dinero;
-		int piedra;
 		int sumaDinero = 0;
 		int cantidadDeBilletes = 0;
-		//INGRESAMOS 5 MONJES
-		for (int i =0 ; i<5; i++){
 
-			nombre = sujeto.DarNombre();
-			dinero = sujeto.DarDinero();
-			piedra = sujeto.DarPiedras();
+		//INGRESAMOS 5 MONJES
+		for (int i =0 ; i<20; i++){
+			monjo sujeto = new monjo();
+			String nombre = sujeto.DarNombre();
+			int dinero = sujeto.DarDinero();
+			int piedra = sujeto.DarPiedras();
 			monjos.add(sujeto);
-			//monjos.add(sujeto.DarNombre(),sujeto.DarDinero(),sujeto.DarPiedras());
-			System.out.println(nombre+" "+ dinero+ " " + piedra);
 		}
 
-		//PNTAMOS PRECIO BILLETE
-		System.out.println("PRECIO DEL BILLETE : " + billet);
-
+		//MONJOS QUE TENEMOS
 		for(monjo o: monjos){
 			System.out.println(o.getNombre()+" "+o.getDinero()+" "+o.getPiedras());
 		}
+		//PNTAMOS PRECIO BILLETE
+		System.out.println("PRECIO DEL BILLETE : " + billet);
 
 		//TOTAL DINERO
-		for (int i = 0;i<monjos.size();i++){
-			sumaDinero += sujeto.getDinero();
+		for(monjo o: monjos){
+			sumaDinero += o.getDinero() ;
 		}
-		System.out.println(sumaDinero);
+		System.out.println("TOTAL DINERO: "+sumaDinero);
 
 		//CANTIDAD DE BILLETES
 		while (!(sumaDinero < billet)){
@@ -57,17 +52,13 @@ public final class principal_monjos {
 			System.out.println("NUMERO DE LA SUERTE : " + numero.getNumero());
 			for (int i = 0; i < monjos.size(); i++){
 				if (numero.getNumero() == monjos.get(i).getPiedras()){
-					System.out.println(monjos.get(i).getNombre()+" "+monjos.get(i).getDinero()+" "+monjos.get(i).getPiedras());
+					System.out.println(monjos.get(i).getNombre()+" HA MUERTO");
 					monjos.remove(i);
 				}
 			}
 		}
-
-		/*for (int i =0 ; i<monjos.size(); i++){
-
-			System.out.println(sujeto.getNombre()+" "+ sujeto.getDinero()+ " " + sujeto.getPiedras());
-			System.out.println(monjos.get(i));
-		}*/
-
+		for(monjo o: monjos){
+			System.out.println(o.getNombre()+" TIENE BILLETE DE VIAJE"); ;
+		}
     }
 }

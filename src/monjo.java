@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class monjo {
 
 	//VARIABLES
@@ -43,7 +45,14 @@ public class monjo {
 	}
 
 	public final String DarNombre() {
-		int i= (int) (Math.random()*(10)+1);
+		ArrayList<Integer>repetidos = new ArrayList();
+		ArrayList<Integer>numerosCorrectos = new ArrayList();
+		int i= (int) (Math.random()*(100)+1);
+		for()
+		if (){
+			repetidos.add(i);
+		}
+
 		nombre = String.format("Monje_%s", i);
 		return nombre;
 	}
