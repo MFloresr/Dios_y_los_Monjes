@@ -18,7 +18,7 @@ public final class principal_monjos {
 		int cantidadDeBilletes = 0;
 
 		//INGRESAMOS 5 MONJES
-		for (int i =0 ; i<5; i++){
+		for (int i =0 ; i<20; i++){
 			monjo sujeto = new monjo();
 			String nombre = sujeto.DarNombre();
 			int dinero = sujeto.DarDinero();
